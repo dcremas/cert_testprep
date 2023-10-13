@@ -37,6 +37,6 @@ Thank you to the Python Institute and the OPENEDG platform for the rich and expa
 
 ##### Application Images (Notetaking & Studying):
 
-![tkinter_gui_notetaking](/Users/dustincremascoli/Documents/prof_cert/cert_testprep/images/tkinter_gui_notetaking.jpg)
+![tkinter_gui_notetaking](images/tkinter_gui_notetaking.jpg)
 
-![tkinter_gui_studying](/Users/dustincremascoli/Documents/prof_cert/cert_testprep/images/tkinter_gui_studying.jpg)
+![tkinter_gui_studying](images/tkinter_gui_studying.jpg)
