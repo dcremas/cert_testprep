@@ -1,0 +1,37 @@
+id,topic,sub_topic,study_point
+1,Advanced OOP,Introduction to OOP,"Class - an idea, blueprint, or recipe for an instance"
+2,Advanced OOP,Introduction to OOP,Instance - an instantiation of the class; very often used interchangeably with the word 'object'
+3,Advanced OOP,Introduction to OOP,"Object - Python's representation of data and methods, objects could be aggregates of instances"
+4,Advanced OOP,Introduction to OOP,Attribute - any object or class trait; could be a variable or method
+5,Advanced OOP,Introduction to OOP,Method - A function built into a class or object; some say it's a callable atrribute
+6,Advanced OOP,Introduction to OOP,Type - refers to the class that was used to instantiate the object
+7,FIle Processing,xml - creating and processing XML files,"xml.etree.ElementTree - has a very simple API for analyzing and creating XML data.
+"
+8,FIle Processing,xml - creating and processing XML files,"XML - Extensible Markup Language is a markup language intended for storing and transporting data, e.g., by systems using the SOAP communication protocol.
+"
+9,FIle Processing,xml - creating and processing XML files,"XML Documents Contain:
+- Prolog
+- Root Element
+- Elements
+- Attributes
+"
+10,FIle Processing,xml - creating and processing XML files,"The getroot method returns the root element.
+"
+11,FIle Processing,xml - creating and processing XML files,"The root elements and all its children are Element objects.
+tag - this returns the tag name as a string.
+attrib - this returns all attributes in the tag as a dictionary.
+"
+12,FIle Processing,xml - creating and processing XML files,"In addition to iterating over tree elements, we can access them directly using indexes.
+"
+13,FIle Processing,xml - creating and processing XML files,"The iter method in the Element class returns all elements by having the tag passed as an argument, the iterator iterates recursively through all child elements and their nested elements.
+"
+14,FIle Processing,xml - creating and processing XML files,"The Element object has a method called findall to search for direct child elements, findall only searches the children of at the first nesting level.
+"
+15,FIle Processing,xml - creating and processing XML files,"The findall method also accepts an XPath expression.
+"
+16,FIle Processing,xml - creating and processing XML files,"The find method returns the first child element containing the specified tag or matching XPath expression.
+"
+17,FIle Processing,xml - creating and processing XML files,"XML is a standard recommended by the W3C organization.
+"
+18,FIle Processing,xml - creating and processing XML files,"To create a tree (an ElementTree object) from an existing XML document, pass it to the parse method.  In addition to the parse method, we can use the method called fromstring, which takes an XML string.
+"

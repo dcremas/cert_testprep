@@ -1,0 +1,947 @@
+id,topic,sub_topic,study_point
+1,OOP Foundations,"Classes, Instances, Attributes Methods -- introduction","Class - an idea, blueprint, or recipe for an instance"
+2,OOP Foundations,"Classes, Instances, Attributes Methods -- introduction",Instance - an instantiation of the class; very often used interchangeably with the word 'object'
+3,OOP Foundations,"Classes, Instances, Attributes Methods -- introduction","Object - Python's representation of data and methods, objects could be aggregates of instances"
+4,OOP Foundations,"Classes, Instances, Attributes Methods -- introduction",Attribute - any object or class trait; could be a variable or method
+5,OOP Foundations,"Classes, Instances, Attributes Methods -- introduction",Method - A function built into a class or object; some say it's a callable atrribute
+6,OOP Foundations,"Classes, Instances, Attributes Methods -- introduction",Type - refers to the class that was used to instantiate the object
+7,FIle Processing,xml - creating and processing XML files,"xml.etree.ElementTree - has a very simple API for analyzing and creating XML data.
+"
+8,FIle Processing,xml - creating and processing XML files,"XML - Extensible Markup Language is a markup language intended for storing and transporting data, e.g., by systems using the SOAP communication protocol.
+"
+9,FIle Processing,xml - creating and processing XML files,"XML Documents Contain:
+- Prolog
+- Root Element
+- Elements
+- Attributes
+"
+10,FIle Processing,xml - creating and processing XML files,"The getroot method returns the root element.
+"
+11,FIle Processing,xml - creating and processing XML files,"The root elements and all its children are Element objects.
+tag - this returns the tag name as a string.
+attrib - this returns all attributes in the tag as a dictionary.
+"
+12,FIle Processing,xml - creating and processing XML files,"In addition to iterating over tree elements, we can access them directly using indexes.
+"
+13,FIle Processing,xml - creating and processing XML files,"The iter method in the Element class returns all elements by having the tag passed as an argument, the iterator iterates recursively through all child elements and their nested elements.
+"
+14,FIle Processing,xml - creating and processing XML files,"The Element object has a method called findall to search for direct child elements, findall only searches the children of at the first nesting level.
+"
+15,FIle Processing,xml - creating and processing XML files,"The findall method also accepts an XPath expression.
+"
+16,FIle Processing,xml - creating and processing XML files,"The find method returns the first child element containing the specified tag or matching XPath expression.
+"
+17,FIle Processing,xml - creating and processing XML files,"XML is a standard recommended by the W3C organization.
+"
+18,FIle Processing,xml - creating and processing XML files,"To create a tree (an ElementTree object) from an existing XML document, pass it to the parse method.  In addition to the parse method, we can use the method called fromstring, which takes an XML string.
+"
+19,FIle Processing,csv - CSV file reading and writing,"The CSC file is a plain text file with the .csv extension.  A typical file contains comma-separted values, but other separators such as a semicolon or tab are allowed.  Only one type of separator can be used in one CSV file.
+"
+20,FIle Processing,csv - CSV file reading and writing,"For commercial projects, the recommended library to use, instead of csv, is pandas.
+"
+21,FIle Processing,csv - CSV file reading and writing,"The CSV (Comma Separated Values) format is one of the most popular file formats used to store and transfer data between different programs (including RDBMS and Excel)
+"
+22,FIle Processing,csv - CSV file reading and writing,"The reader function returns an object that allows you to iterate over each line in the CSV file.
+"
+23,FIle Processing,csv - CSV file reading and writing,"The newline='' argument added to the open function protects us from incorrect interpretation of the newline character on different platforms.
+"
+24,FIle Processing,csv - CSV file reading and writing,"The csv module provides a more convenient way to read data, where each line is mapped to an OrderedDict object, using the DictReader class.
+"
+25,FIle Processing,csv - CSV file reading and writing,"The DictReader class accepts a file object, and it reads the first line as the header to map to keys, if the file does not have a header, the fieldnames argument needs to be specified.
+"
+26,FIle Processing,csv - CSV file reading and writing,"Saving data to a CSV file is done using the writer function.  The writerow(s) methods take a list of values as an argument, and then saves them as one line in a CSV file.
+"
+27,FIle Processing,csv - CSV file reading and writing,"The quotechar and quoting arguments within the writer function (and also the reader function) allow you to handle text that would have been confused with your delimiter, options include:
+- csv.QUOTE_ALL, csv.QUOTE_NONNUMERIC, csv.QUOTE_NONE
+"
+28,FIle Processing,csv - CSV file reading and writing,"The DictWriter class maps dictionaries to rows.  Unlike the DictReader class, you have to define a header list.  The writeheader is first called with this list, and then the dictionary rows are passed to the writerow method.
+"
+29,FIle Processing,configparser - configuration file parser,"It is not a good idea to hardcode logins, passwords or access tokens directly within our code.  A better solution is to use the configuration file, the configparser module is available within the standard library.
+"
+30,FIle Processing,configparser - configuration file parser,"The DEFAULT section in a configuration file contains the default values that can be read in the other sections of the file.
+"
+31,FIle Processing,configparser - configuration file parser,"Parsing a configuration file is done utilzing the ConfigParser object, and then the read method.  It can be passed a single config.ini file or a list containing several files.
+"
+32,FIle Processing,configparser - configuration file parser,"The sections method of the ConfigParser object displays the names of the sections, excluding the DEFAULT section.  Accessing these sections is done in a manner like accessing dictionary keys.  There is a also a get method to achieve this result.
+"
+33,FIle Processing,configparser - configuration file parser,"The configparser module also houses other methods for reading configuration settings, like the read_dict method, with takes in a dictionary of dictionaries.  The configparser module also has read_file and read_string methods that allow you to read the configuration from an open file or string.
+"
+34,FIle Processing,configparser - configuration file parser,"Writing to a configuration file requires a write object (using the open method) and also a config object that houses the dictionary of dictionaries key: values.
+"
+35,FIle Processing,configparser - configuration file parser,"Interpolation allows you to create expressions consisting of a placeholder under which the appropriate value will be substituted.  FORMAT %( )s...
+"
+36,FIle Processing,sqlite3 - interacting with SQLite databases,"The database management system (DBMS) is responsible for:
+- creating a database structure.
+- inserting, updating, deleting and searching data.
+- ensuring data security.
+- transaction management.
+- ensuring concurrent access to data for many users.
+- enabling data exchange with other database systems.
+"
+37,FIle Processing,sqlite3 - interacting with SQLite databases,"Sqlite is:
+- One of the most popular database management systems in the world.
+- A C library, which allows the user to read and write data directly to a file.
+- The complete SQL database is store in only one file (no server process).
+- The database file is cross-platform, which means it can be copied between 32 and 64 bit systems.
+
+"
+38,FIle Processing,sqlite3 - interacting with SQLite databases,"The python library for SQLite is sqlite3, providing an interface compliant with the DB-API specification described by PEP 249.
+
+"
+39,FIle Processing,sqlite3 - interacting with SQLite databases,"The connect method returns the database representation as a Connection object.  The connect method only creates a database if it cannot find a database in the given location, if the database exists SQLite connects to it.
+"
+40,FIle Processing,sqlite3 - interacting with SQLite databases,"SQL (Structured Query Language) is for creating, modifying and managing relational databases.  It is used by the most popular database management systems and the language was developed by IBM in the 1970's.
+"
+41,FIle Processing,sqlite3 - interacting with SQLite databases,"When a connection object is created, is has a very useful method called cursor.  The method creates a  Cursor object that allows any SQL statements to be executed in the database.
+"
+42,FIle Processing,sqlite3 - interacting with SQLite databases,"The execute method has an optional argument in the form of an array of parameters, it can take a tuple or a simple array as long as it contains the same number of elements as the query parameters.
+"
+43,FIle Processing,sqlite3 - interacting with SQLite databases,"The commit method confirms our changes (the current transaction), if you forget to call it your changes won't be visible in the database.
+"
+44,FIle Processing,sqlite3 - interacting with SQLite databases,"The close method closes the database connection, after inserting all tasks.
+"
+45,FIle Processing,sqlite3 - interacting with SQLite databases,"The executemany method allows you to insert multiple records at once.  As an argument, it accepts as SQL statement and an array containing any number of tuples.
+"
+46,FIle Processing,sqlite3 - interacting with SQLite databases,"Reading data saved in the database is done with the well-known Cursor object via a SELECT statement.  After calling the execute method with the appropriate SELECT statement, the Cursor object is treated as an iterator.
+"
+47,FIle Processing,sqlite3 - interacting with SQLite databases,"If you don't want to treat the Cursor object as an iterator after a SELECT statement, you can use its method called fetchall, the fetchall method is less efficient than the iterator, because it reads all records into the memory and then returns a list of tuples.
+"
+48,FIle Processing,sqlite3 - interacting with SQLite databases,"In addition to the iterator and the fetchall method, the Cursor object provides a very useful method called fetchone to retrieve the next available record.
+"
+49,FIle Processing,sqlite3 - interacting with SQLite databases,"The UPDATE statement is used to modify existing records in the database:
+
+UPDATE table_name
+SET column = ?
+WHERE id = ?;
+
+
+"
+50,FIle Processing,sqlite3 - interacting with SQLite databases,"Delete statement:
+
+DELETE FROM table_name
+WHERE condition;
+
+"
+51,FIle Processing,logging - basics logging facility for Python,"Logs are most often used to find the cause of an error.  In Python you can store logs in different places, most often it's in the form of a file, but it can also be an output stream or even an external service.
+"
+52,FIle Processing,logging - basics logging facility for Python,"The getLogger function returns a Logger objectn (the root logger), it is recommended to call the getLogger function with the __name__ argument.  Several calls to the getLogger function with the same name will always return the same object.
+"
+53,FIle Processing,logging - basics logging facility for Python,"The Logger object allows you to create logs with different levels of logging that help you to distinguish between less important logs and those reporting a serious error.
+
+The levels are NOTSET(0), DEBUG(10), INFO(20), WARNING(30), ERROR(40), CRITICAL(50)
+"
+54,FIle Processing,logging - basics logging facility for Python,"The basic logging configuration is done using the basicConfig method, with the following arguments:
+- level, filename, filemode, format.
+"
+55,FIle Processing,logging - basics logging facility for Python,"The format we define for a logger is created by combining the attributes of the LogRecord objected separated by a colon.  The LogRecord object is automatically created by the logger during logging.
+- Exampe attributes are %(name)s, %(levelname)s, %(asctime)s, %(message)s.
+"
+56,FIle Processing,logging - basics logging facility for Python,"Each logger can save logs in different locations as well as in different formats.  To do this, you must define your own handler and formatter via the FileHandler and setFormatter methods.
+"
+57,Working with RESTful APIs,Basic concepts of network programming,"REST: Representational State Transfer
+
+Re - Our machinery stores, transmits and receives representations, the way in which data or states are retained inside the system and presented to users.
+S - Using REST you can affect the object's state through the network.
+T - The network is able to act as a carrier allowing you to transmit states representations to and from the server.
+"
+58,Working with RESTful APIs,Basic concepts of network programming,"REST uses a very curious way of representing its data - it's always text. Pure, plain text.
+"
+59,Working with RESTful APIs,Basic concepts of network programming,"REST is focussed on a very specific kind of data - the data which reflects states.
+"
+60,Working with RESTful APIs,Basic concepts of network programming,"A socket is a kind of end-point.  An end-point is a point where the data is available to get if from and where the data may be sent to.
+"
+61,Working with RESTful APIs,Basic concepts of network programming,"BSD (Berkeley Software Distribution) sockets - A universal set of functions suitable for implementation in nearly all operating systems and available in all modern programming languages.  Then became POSIX sockets.
+"
+62,Working with RESTful APIs,Basic concepts of network programming,"All modern OSs implement BSD sockets in a more or less accurate way.  Despite their differences, the general idea remains the same.
+"
+63,Working with RESTful APIs,Basic concepts of network programming,"Socket Domain - Unix Domain and Internet Domain (TCP/IP)
+Socket Address - IP Address and Port Number
+IP address - A 32-bit long value used to identify computers connected to any TCP/IP network.
+Socket/service number - A 16-bit long integer number identifying a socket within a particular system.  The HTTP protocol, a carrier of data used by REST, usually uses port 80.
+Protocol - A standardized set of rules allowing processes to communicate with each other.
+"
+64,Working with RESTful APIs,Basic concepts of network programming,"Protocol Stack - Is a multilayer set of cooperating protocols providing a unified repertoire of services.  The TCP/IP protocol stack is designed to cooperate with networks based on the IP protocol (the IP Networks)
+"
+65,Working with RESTful APIs,Basic concepts of network programming,"The conceptual model of network services describes the protocol stack in a way where the most basic, elementary services are located at the bottom of the stack, while the most advanced and abstractice lie on the top.
+"
+66,Working with RESTful APIs,Basic concepts of network programming,"The IP (Internetwork Protocol) is one of the lowest parts of TCP/IP protocol stack.  Its functionality is very simple, it is able to send a packet of data (a datagram) between two network nodes.
+"
+67,Working with RESTful APIs,Basic concepts of network programming,"The TCP (Transmission Control Protocol) is the highest part of the TCP/IP protocol stack.  It uses datagrams (provided by the lower layers) and handshakes (an automated process of synchronizing the flow of data) to construct a reliable communication channel able to transmit and receive single characters.
+"
+68,Working with RESTful APIs,Basic concepts of network programming,"UDP (User Datagram Protocol) is faster than TCP, but less reliable than TCP.  TCP is a first-choice protocol where data safety is more important than efficiency, UDP is more adequate for applications where response time is crucial.
+"
+69,Working with RESTful APIs,Basic concepts of network programming,"Connection-oriented communicated - A form of communication which demans some preliminary steps to establish the connection and other steps to finish it. Both sides of the communication are aware that the other party is connected.  (Example Phone Call.)
+"
+70,Working with RESTful APIs,Basic concepts of network programming,"Connectionless Communication - A communication which can be established ad-hoc.  Both parties have equal rights, but neither parties is aware of the other side's state. (Example Walkie Talkies).  Usually built on top of UDP.
+"
+71,Working with RESTful APIs,How to use sockets in Python,"Socket Process:
+1. Create a new socket.
+2. Connect the socket to the HTTP server of a given address.
+3. Send a request to the server.
+4. Receive the server's response (containing the requested root document).
+5. Close the socket.
+"
+72,Working with RESTful APIs,How to use sockets in Python,"The address in a socket request can be the domain name of the server (www.google.com with no leading HTTP), or it can be the IP address of the server (i.e. 87.98.235.184).  The only issue with utilizing the IP address is that there can be more than one HTTP server located at the same IP address.
+"
+73,Working with RESTful APIs,How to use sockets in Python,"The socket module is important as it is able to act as a carrier for REST.  TCP/IP is only interesting for us to the extent that it is able to transport HTTP traffic, and HTTP is interesting only to the extent that it is able to act as a carrier for REST.
+"
+74,Working with RESTful APIs,How to use sockets in Python,"Creating a socket object utilizes the AF_INET Internet socket domain as well as SOCK_STREAM (which specifies the single character device, transfering data byte by byte.)  This is prepared to work on top of TCP protocol, the default socket config.  UDP is a different constructor syntax.
+"
+75,Working with RESTful APIs,How to use sockets in Python,"The socket connect() method tries to connect your socket to the service of the specified address and port(service) number.  The two values are passed into the method as a tuple.  This is specific to the INET domain, other domains operate differently.
+"
+76,Working with RESTful APIs,How to use sockets in Python,"A conversation with the HTTP server consists of requests (sent by the client) and reponses (sent by the server)
+"
+77,Working with RESTful APIs,How to use sockets in Python,"HTTP defines a set of acceptable requests - these are the request methods or HTTP words, the method asking the server to send a particular document of a given name is called GET.
+"
+78,Working with RESTful APIs,How to use sockets in Python,"The send() method doesn't natively accept strings, that is why the b prefix is used, sample send request:
+sock.send(b""GET / HTTP/1.1\r\nHost: ""
+                 + bytes(server_addr, ""utf8"")
+                 + b""\r\nConnection: close\r\n\r\n"")
+"
+79,Working with RESTful APIs,How to use sockets in Python,"The recv() method waits for the servers response, gets it, and puts it inside a newly created object of type bytes. The argument specifies the maximal acceptable length of the data to be received, and might need to be invoked till all bytes are received.
+"
+80,Working with RESTful APIs,How to use sockets in Python,"The parameterless close() method will ensure the connection is fully terminated.
+"
+81,Working with RESTful APIs,How to use sockets in Python,"The response that is received back has two parts:
+- The reponse header, with the status code (ex. 200 for success)
+- The document, presented as HTML.
+"
+82,Working with RESTful APIs,How to use sockets in Python,"Socket Exceptions:
+- socket.gaierror thrown by the getaddrinfo() method during server connection.
+- socket.timeout, raised when the server's reaction doesn't occur in a reasonable time.  This can be set using a method named settimeout()
+"
+83,Working with RESTful APIs,Introduction to JSON,"JSON is a kind of universal bridge abe to move data between seemingly imcompatible parties, it is portable and platform independent.  JSON is the answer to a quite basic need, the need to transfer data that is the content of an object or set of objects.
+"
+84,Working with RESTful APIs,Introduction to JSON,"JSON uses two simple tricks:
+- It uses UTF-8 coded text - no machine/platform-dependent formats are used.
+- It uses a simple and not very expanded format to represent mutual dependencies and relations between different parts of objects, and is able to transfer not only the values of objects properties, but also their names.
+"
+85,Working with RESTful APIs,Introduction to JSON,"JSON knows nothing about numbers written using radices different to 10 (i.e. Octal, Hex or Binary)
+"
+86,Working with RESTful APIs,Introduction to JSON,"JSON strings may look familiar, but there is one important difference, you must not use apostrophes to delimit the text, the only delimiter is a quote.
+"
+87,Working with RESTful APIs,Introduction to JSON,"JSON strings cannot be split over multiple lines, each string must fit entirely on one line (there can be more than one string on the same line.)
+"
+88,Working with RESTful APIs,Introduction to JSON,"To represent numbers in JSON feel free to use a minus sign to put negative numbers inside the JSON text.  Don't use a plus sign to show a number is positive, don't use leading zeros. Real numbers in JSON are the same as in Python, including the utilization of scientific notation.
+"
+89,Working with RESTful APIs,Using the json module in Python,"Python uses a small set of simple rultes to build JSON messages from its native data:
+dict --> object
+list or tuple --> array
+string --> string
+int or float --> number
+True / False --> true / false
+None --> null
+"
+90,Working with RESTful APIs,Using the json module in Python,"The process in which an object (stored internally by Python) is converted into textual or any other portable aspect is often called serialization. Similarly, the reverse action (from portable into internal) is called deserialization.
+"
+91,Working with RESTful APIs,Using the json module in Python,"Four main functions in the JSON module:
+dumps() - Python object into JSON string.
+dump() - Python object into JSON file.
+loads() - JSON string into Python object.
+load() - JSON file into Python object.
+"
+92,Working with RESTful APIs,Using the json module in Python,"If a number encoded inside a JSON string doesn't have any fraction part, Python will create an integer number, or a float number otherwise.
+"
+93,Object Persistence,Shallow and deep copy operatons,"When an assignment statement is being used, the evaluation of the right side of the clause takes precendence over the left side.
+"
+94,Object Persistence,Shallow and deep copy operatons,"Assignment Statement:
+1. An object is created in the computer's memory.  Now the object has an identity.
+2. The object is then populated with other objects, now our object has a value.
+3. Finally a variable which you should treat as a label or name binding, is created, and this label refers to a distinct place in the computer memory.
+"
+95,Object Persistence,Shallow and deep copy operatons,"The built-in id() function returns the 'identity' of an object.  This is an integer which is guaranteed to be unique and constant for this object during its lifetime.
+- Two objects with non-overlapping lifetimes may have the same id() value.
+- Don't treat it as an absolute memory address.
+- Do not name a variable id, as it will make the function unreachable.
+"
+96,Object Persistence,Shallow and deep copy operatons,"When you have two variables referring to the same object, the return values of the id() function must be the same.
+"
+97,Object Persistence,Shallow and deep copy operatons,"To check whether both operands refer to the same object or not, you should use the 'is' operator.  It responds to the question ""Are both variables referring to the same identity?"".  == is for equal values.
+"
+98,Object Persistence,Shallow and deep copy operatons,"A compound object is an object than contains other objects like lists, dictionaries or class instances.
+"
+99,Object Persistence,Shallow and deep copy operatons,"A shallow copy is only one level deep.  The copying process does not recurse and therefore does not create copies of the child objects, but instead populates the object with references to the already existing objects.  This can be achieved via [:] slicing and the copy function of the copy module.
+"
+100,Object Persistence,Shallow and deep copy operatons,"To make an independent copy of a compound object (list, dictionary, custom class instance) deep copy can be used, which:
+- Constructs a new compound object and then recursively inserts copies into it of the objects found in the original.
+- Takes more time to complete, as there are many operations to be performed.
+- Is implemented by the deepcopy() function, delivered by the python 'copy' module.
+"
+101,Object Persistence,Shallow and deep copy operatons,"The deepcopy() method creates and persists new instances of source objects, whereas any shallow copy operation only stores referenced to the original memery address.
+"
+102,Object Persistence,Shallow and deep copy operatons,"A deep copy operation takes significantly more time than any shallow copy operation.
+"
+103,Object Persistence,Shallow and deep copy operatons,"The deepcopy() method copies the whole object, including the nested objects; it's an example of practical recursion taking place.
+"
+104,Object Persistence,Shallow and deep copy operatons,"Deep copy might cause problems when there are cyclic references in the structure to be copied.
+"
+105,Introduction to PEPs,What is PEP?,"PEP outlines the language standards and provides information about many changes and processes related to Python.
+"
+106,Introduction to PEPs,What is PEP?,"PEP is an acronym for Python Enhancement Proposals, a collection of guidelines, best practices, descriptions of (new) features and implementations, as well as processes, mechanisms and important information surrounding Python.
+"
+107,Introduction to PEPs,What is PEP?,"If a new feature is planned to be added to Python, it will be detailed in a PEP along with the technical specifications and the rationale for its implementation.
+"
+108,Introduction to PEPs,What is PEP?,"Three different types of PEP's:
+- Standards Track PEPs, which describe the new language features and implementations.
+- Information PEPs, which describe Python design issues, as well as provide guidelines and information to the Python community.
+- Process PEPs, which describe the various processes that revolve around Python.
+"
+109,Introduction to PEPs,What is PEP?,"PEPs are primarily addressed to Python Developers and members of the Python community.  They are maintained as text files in a repository, and can be accessed online.
+"
+110,Introduction to PEPs,What is PEP?,"PEP 1 also defines:
+- Python's Steering Council - a five person committee and the final authorities who accept or reject PEPs.
+- Python's Core Developers - The group of volunteers who manage Python.
+- Python's BDFL - Guido Van Rossum, the original creator of Python, who resigned in 2018.
+"
+111,Working with RESTful APIs,HTTP made simple -- the request module,"Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a brower.  On top of this is json-server - a free and open package.
+"
+112,Working with RESTful APIs,HTTP made simple -- the request module,"The HTTP protocol operates by using methods.  The HTTP method is a two-way interaction between the client and the server (note: the client initiates the transmission) dedicated to a certain action.  GET is one of them, and is used to convince the server to transfer some resources asked for by the client.
+"
+113,Working with RESTful APIs,HTTP made simple -- the request module,"A requests function named get() initiates execution of the HTTP GET method and receives the server's response.  The code is simple and compact.  We only need to provide:
+- The server's address
+- The server port number, the port number can be omitted if equal to 80.
+"
+114,Working with RESTful APIs,HTTP made simple -- the request module,"The get() function returns a result, it's an object containing all the information describing the GET method's execution.  The most important information is the status_code, other important attributes are:
+- Header
+- Content
+- Text - raw response string.
+"
+115,Working with RESTful APIs,HTTP made simple -- the request module,"When both the client and the server are aware of the fact that the contents (no matter which part sent them) contain a JSON message, it is also possible to use a method name json().
+"
+116,Working with RESTful APIs,HTTP made simple -- the request module,"The HTTP protocol defines the following methods:
+- GET, if you want the server to give you something.
+- POST, is used to transfer a resource, but in the opposite direction, from the client to server.
+- PUT, similar to POST, the resource being sent it intended to replace the previously stored data.
+- DELETE, to order the server to remove a resource.
+"
+117,Working with RESTful APIs,HTTP made simple -- the request module,"Other HTTP Methods:
+- HEAD
+- CONNECT
+- OPTIONS
+- TRACE
+"
+118,Working with RESTful APIs,HTTP made simple -- the request module,"The get() function takes one additional argument named timeout.  It's the maximum time (measured in seconds and expressed as a real number) we agree to wait for a server's response.  If the tiime is exceeded, get() will raise an exception names requests.exceptions.Timeout.
+"
+119,Working with RESTful APIs,CRUD -- how to build a simple REST client?,"A properly trained web server can be a very effective and convenient gateway to very complicated and heavy databases or other services for storing and processing information.
+"
+120,Working with RESTful APIs,CRUD -- how to build a simple REST client?,"REST was invented for very different programs written in very different technologies that can utilize shared data through one, universal interface.  The interface provided to the user will always look the same.
+"
+121,Working with RESTful APIs,CRUD -- how to build a simple REST client?,"The REST interface enables the user to perform a basic set of operations - they are elementary, but complex enough to build complex services.
+CRUD.
+"
+122,Working with RESTful APIs,CRUD -- how to build a simple REST client?,"CRUD:
+C - Create, POST HTTP method.
+R - Read or retrieve, GET HTTP method.
+U - Update, PUT HTTP method.
+D - Delete, DELETE HTTP method.
+"
+123,Working with RESTful APIs,CRUD -- how to build a simple REST client?,"The fact that the json-server serves data initially encoded as JSON has absolutely nothing to do with the fact that we will transmit JSON messages between the client (our code) and the server (json-server) . The way the server is used to initialize and store data is actually a black box for us (unless we are implementing the server itself).
+"
+124,Working with RESTful APIs,CRUD -- how to build a simple REST client?,"The HTTP server is able to transfer virtually any kind of data: text, image, video, sound and many others.  The server reponses header contains a field name Content-Type, that alerts us of this.
+"
+125,Working with RESTful APIs,CRUD -- how to build a simple REST client?,"If you don't need all the contents of the resource specified during a GET request, you can prepare a specific request via the URI or utilizing parameters.
+"
+126,Working with RESTful APIs,CRUD -- how to build a simple REST client?,"A particular server may provide some additional facilities, e.g. it may manipulate data before sending it to the client.  The json-server is able to sort items using any of the properties as the sort key.
+"
+127,Working with RESTful APIs,CRUD -- how to build a simple REST client?,"A server implementing HTTP version 1.1 works in the following manner:
+- It waits fort the cleints connection.
+- It reads the clients request.
+- It sends it response.
+- It keeps the connection alive, waiting for the clients next request.
+- If the client is inactive for some time, the server silently closes the connection, this means that the client is obliged to set up a new connection again if it wants to send another request.
+"
+128,Working with RESTful APIs,Introduction to XML -- Why do we prefer to use JSON?,"XML - Extendable Markup Language:
+XML is a language, it is not a programming language.  XML is like JSON, a universal and transparent carrier of any type of data.  XML is much older than JSON.  XML seems to be bloated compared to JSON.
+"
+129,Working with RESTful APIs,Introduction to XML -- Why do we prefer to use JSON?,"XML documents can OPTIONALLY contain:
+HEADER, first line that has the version of the XML and the how the text is encoded.
+COMMENT, second line that is ignored completely by the XML parser.
+DOCTYPE, third line that describes the desired document content. (DTD) Document Type Definition.
+
+"
+130,Working with RESTful APIs,Introduction to XML -- Why do we prefer to use JSON?,"The XML document consisits of Elements, each element is marked by a pair of tags, and opening tag and a closing tag.  All the text within the tags is the elements content, or simply elements text.
+"
+131,Working with RESTful APIs,Introduction to XML -- Why do we prefer to use JSON?,"XML contains a root element, which must occur exactly once inside the XML document.
+"
+132,Working with RESTful APIs,Introduction to XML -- Why do we prefer to use JSON?,"Elements can also contain attributes, which are reserved for absolute or almost absolute values.  We can put as many attributes inside a tag as we need.
+"
+133,Working with RESTful APIs,Introduction to XML -- Why do we prefer to use JSON?,"The best model of the XML structure is a tree, which is often called a graph by mathematicians and computer scientists.
+"
+134,Working with RESTful APIs,Introduction to XML -- Why do we prefer to use JSON?,"JSON is more convenient and last but most important - most currently implemented services uses JSON, not XML.  JSON is much more popular.
+"
+135,OOP Advanced,Extended fucntion argument syntax,"The two special identifiers (named *args and **kwargs) should be put as the last two parameters in a fumction definition.  Thier names could be changed, because it is just a convention, but it is more important to to sustain the order of the parameters and leading asterisks.
+"
+136,OOP Advanced,Extended fucntion argument syntax,"*args - referes to a tuple of additional, not explicity expected positional arguments, so arguments passed without keywords and passed next after the expected arguments.  In other words, *args collects all unmatched postional arguments.
+"
+137,OOP Advanced,Extended fucntion argument syntax,"**kwargs (keyword arguments) - refers to a dictionary of all unexpected arguments that were passed in the form of keyword=value pairs. Likewise, **kwargs collects all unmatched keyword arguments.
+"
+138,OOP Advanced,Extended fucntion argument syntax,"In Python, asterisks are used to denote that args and kwargs parameters are not ordinary parameters and should be unpacked, as they carry multiple items.
+"
+139,OOP Advanced,Extended fucntion argument syntax,"Important facts about function arguments;
+- Some functions can be invoked without arguents.
+- Functions may require a specific number of arguments with no exclusions.
+- Functions might have already defined default values for some parameters (keyword parameters).
+- We can pass arguments in any order if we are assigning keywords to all argument values, otherwise positional ones are the first ones on the arguments list.
+"
+140,OOP Advanced,Extended fucntion argument syntax,"When you want to forward arguments received by your very smart and universal function - you do it defined with *args and **kwargs.
+"
+141,OOP Advanced,Decorators,"A decorator is one of the design patterns that decribes the structure of related objects.  Python is able to decorate functions, methods and classes.
+"
+142,OOP Advanced,Decorators,"Decorators are used to peform operations before and after a call to a wrapped object or even to prevent its execution, depending on the circumstances.  A decorator can change the operation of the packaged object without directly modifyiing it.
+- Decorators are used in: the vaildation of arguments, the modification of arguments, the modification of returned objects, the measurement of execution time, message logging, thread synchronization, code refactorization and caching.
+"
+143,OOP Advanced,Decorators,"Decorator operations are performed on object names.
+The name of the function object ceases to indicate the object representing our function and from that moment on it indicates the object returned by the decorator.
+"
+144,OOP Advanced,Decorators,"Decorators should be Universal:
+- Decorators which should be universal should support any function, regrardless of the number and type of arguments passed.
+- In such a situation, we can use the *args and **kwargs concepts and employ the closure technique to persist arguments.
+"
+145,OOP Advanced,Decorators,"Decorators can accept their own attributes as in Python we can create a decorator with arguments.
+"
+146,OOP Advanced,Decorators,"Deocrator Stacking - Python allows you to apply multiple decorators to a callable object (function, method or class).  The most important thing to remember is the order in which the decorators are listed in your code, because it determines the order of the executed decorators.
+"
+147,OOP Advanced,Decorators,"A decorator does not have to be a function, it could be a class that plays the role of a decorator as a function.  It utilizes special methods:
+- The __init__ method assigns a decorated function reference to the self.attribute for later use.
+- The __call__ method, which is responsible for supporting a case when an object is called, calls a previously referenced function.
+"
+148,OOP Advanced,Decorators,"The advantage of decorating functions with classes is that the classes bring all the subsidiary they can offer, like inheritance and the ability to create dedicated supportive methods.
+"
+149,OOP Advanced,Decorators,"Decorators are powerful and useful tools in Python, because they allow programmers to modify the behavior of a function, method or class.
+- Decorators allow us to wrap another callable object in order to extend its behavior.
+- Decorators rely heavily on closures and *args and **kwargs.
+"
+150,OOP Advanced,Encapsulation,"Attribute encapsulation describes the idea of bundling attributes and methods that work on those attributes within a class.
+"
+151,OOP Advanced,Encapsulation,"Encapsulation is used to hide attributes inside a class like in a capsule, preventing unauthorized parties' direct access to them.  Publicly accessible methods are provided in the class to access the values, and other objects call those methods to retrieve and modify the values within the object.
+"
+152,OOP Advanced,Encapsulation,"Python introduces the concept of properties that act like proxies to encapsulated attributes:
+- The code calling the proxy methods might not realize if it is talking to the real attributes or to the methods controlling the access to the attributes.
+- You can change your class implementation from a class that allows simple and direct access to attributes and the consumer implementation does not have to be changed.
+"
+153,OOP Advanced,Encapsulation,"Attribute encapsulation is not full access control, the programmer can still get access to your attributes intentionally as Python does not deliver true privacy.  If your code does intentionally access the attributes marked as private in a direct way, it truly is not Pythonic code.
+"
+154,OOP Advanced,Encapsulation,"Python allows you to control access to attributes with the built in property() function and corresponding decorator @property.
+- It designates a method which will be called automatically when another object wants to read the encapsulated value.
+- The name of the method will be used as the name of the instance attribute.
+- It should be defined before the @attribute.setter and @attribute.deleter methods.
+"
+155,OOP Advanced,Encapsulation,"Whenever you'd like to control access to an attribute, you should prepare dedicated properties, becuase properties control only designated attributes.  Properties are also inherited, so you can call setters as if they were attributes.
+"
+156,OOP Advanced,Different faces of Python methods,"Class Methods and Static Methods:
+- Should be understood as tool methods, extending our ability to use classes, not necessarily requiring the creation of class instances to use them.
+"
+157,OOP Advanced,Different faces of Python methods,"Class methods are methods that, like class variables, work on the class itself, and not on the class objects that are instantiated.  They are methods bound to the class, not to the object.
+- They can control access to the class variables.
+- They can be utilized to create a class instance in an alternative way, so the class method can be impemented by an alternative constructor.
+"
+158,OOP Advanced,Different faces of Python methods,"Static Methods are methods that do not require (and do not expect!) a parameter indicating the class object or the class itself in order to execute their code:
+- It can be used when you need a utility method that comes in a class because it is semantically related, but does not require an object of that class to execute its code.
+- Also, when the static method does not need to know that state of the objects or classes.
+"
+159,OOP Advanced,Different faces of Python methods,"Static Methods do not have the ability to modify the state of objects or classes, because they lack the parameters that would allow this.
+"
+160,OOP Advanced,Different faces of Python methods,"Static and Class Methods - comparison:
+1. A class method requires 'cls' as the first parameter and a staic method does not.
+2. A class method has the ability to access the state or methods of the class, and a static method does not.
+3. A class method is decorated by @classmethod and a static method by @staticmethod.
+4. A class method can be used as an alternative way to create objects, and a static method is only a utiity method.
+"
+161,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","PEP 257 is a document created as part of the Python Developer's Guide. It outlines the conventions, best practices, and semantics (not laws or regulations!) associated with documenting python code using docstrings.
+- What should Python docstrings contain.
+- How should Python docstrings be used.
+"
+162,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","A docstring is a string literal that occurs as the first statement in a module, function, class or method definition.  Such a docstring becomes the __doc__ special attribute of that object.
+- To provide information about the functionality of a larger piece of code in a prescriptive way.
+"
+163,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","Documenting code helps to maintain a cleaner, more readable, and more sustainable code, which means it's one of the best practices a good, responsible developer should adopt as part of their daily programming workshop toolset.
+"
+164,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","Docstrings can be accessed by reading the source code, and by using the __doc__ attribute or the help function.
+"
+165,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","The main purpose of the docstring is documenting your code - describing its use, functionality, and capabilities to users who do not necessarily need to know how it works.
+"
+166,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","Docstrings can be easily turned into documentation, which describes a module's or function's behavior, the meaning of parameters, or the purpose of a spcecific package.
+"
+167,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","Type hinting is a mechanism described in PEP 484 that allows you to equip your code with additional information without using comments. Utilizing the typing module, you provide type hint infomation in your code in order to leave certain suggestions, mark certain possible problems that may come up in the development process, and label specific names with type information.
+"
+168,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","In nutshell, type hinting allows you to statically indicate the type information related to Python objects.  Type hinting is OPTIONAL.
+"
+169,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","Type hinting can help you document your code, instead of leaving argument and response related information in docstrings, you can use the language itself to serve this purpose.
+"
+170,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","Type hinting allows you to notice certain kinds of errors more effectively and write a more beautiful and most of all, a cleaner code.
+"
+171,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","Type hinting in Python is not used at runtime, all type hinting information in the form of annotations is erased when the program is executed, it does not have an effect on the operation of the code.
+"
+172,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","All public modules, functions, classes and methods that are exported by a given module should have docstrings, non-public methods do not need to contain docstrings.  In the case of packages, which should be documented, they should be included within the __init__.py file in the package folder.
+"
+173,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","Docstrings should be surrounded by triple doube quotes ("""""" """"""), if backslashes are neccesary in the code then r"""""" """""" double quotes should be used, and for unicdoe docstrings u"""""" """""".
+"
+174,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","One line docstrings - they are used for simple and short descriptions and should fit on one line.
+Multi-line docstrings - They are used for more difficult cases and should consist of a summary line followed by one blank line and a more elaborate description.
+"
+175,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","One-line docstrings:
+- Shoud be used for rather simple, obvious and short descriptions.
+- Should begin with an upper-case letter and end with a period.
+- Should be used to prescribe the code segment'e effect, not describe.
+- A docstring should not just simply repeat the function or method parameters.
+- Do not use a blank line above or under a one-line docstring unless your documenting a class.
+"
+176,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","Multi-line docstrings:
+- Should be used for non-obvious cases and more detailed descriptions of code segments.
+- They should have a summary line, followed by a blank line and a more elaborate description.
+- The end quotes should be put on a separate line.
+- A multi-line docstring should be indented to the same level as the open quotes.
+"
+177,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","A linter is a tool that analyzes your code for any stylistic anomalies and programming errors against a set of pre-defined rules.  It's a program that analyzes your code and reports such issues as structural and syntax errors, consistency breakups and a lack of compatibility with best practices or code guidelines like PEP8.
+- Examples include Pycodestyle (the official linter tool to check PEP8) and Flake8.
+"
+178,"PEP 257, PEP 484, Documentation standards and linters","PEP 257 - Docstring Conventions, documentation, type hinting, and linters","A fixer is a program that helps you fix these issues and format your code to be consistent with the adopted standars.
+- The most popular fixers are Black, YAPF and autopep8.
+"
+179,Tkinter Essentials,Python Professional Course Series: GUI Programming,"Visual Programming:
+- Creating applications to utilize GUI features.
+- The term stresses the fact that an application's look is as important as its functionality, what you can do to change its state, and how you force the application to submit to your will.
+- A working GUI application externalizes its existence by creating a window (or windows) visible on the screen, in some environments the window can occupy the whole screen.
+"
+180,Tkinter Essentials,Python Professional Course Series: GUI Programming,"Widgets - The GUI elements designed to receive the users gestures (a mouse's movements, clicks or dragging) are called controls or widgets.
+- The widget that owns the focus is called the focussed widget.
+"
+181,Tkinter Essentials,Python Professional Course Series: GUI Programming,"Classical vs event-driven programming:
+- Detecting, registering and classifying all of a user's actions is beyond the programmer's control, their is an event controller which takes care of this, it's automatic and completely opaque.
+- You have to inform the event controller what you want to perform when a particular even takes place (mouse-click) via an event handler.
+"
+182,Tkinter Essentials,Python Professional Course Series: GUI Programming,"Tk and Tkinter - a widget toolkit, a GUI toolkit or a UX library.
+- It's free and open.
+- It has been developed since 1991 (stable and mature)
+- It defines and serves more than thirty different universal widgets.
+"
+183,Tkinter Essentials,Let Tkinter speak!,"Tkinter is a package name tkinter.  The package contains a bunch of functions, constants, classes, objects and modules used to built GUI applications, consisting of four elements:
+- Importing the needed tkinter components.
+- Creating an applications main window.
+- Adding a set of necessary widgets to the window.
+- Launching the event controller.
+"
+184,Tkinter Essentials,Let Tkinter speak!,"An event hander is a piece of code responsible for responding to all clicks addressed to our button.
+- It' a function, just a simple function.
+- This function is often called a callback, handler and callback are used interchangeably.
+"
+185,Tkinter Essentials,Let Tkinter speak!,"Binding the callback with the widget by using the command constructor's parameter is not the only way offered by tkinter for this purpose, callbacks can be replaced during program execution.  The one and same callback can also be bound with more than one widget.
+"
+186,Tkinter Essentials,Let Tkinter speak!,"messagebox is able to create dialog boxes intended to ask questions, display messages, and to recieve a users reply.  The dialog box is an example of a modal window, a window which grabs the whole of the application's focus. It means that all other application widgets become deaf as long as the modal window is present.
+"
+187,OOP Advanced,Abstract classes,"An abstract class is a blueprint for other classes, a contract between a class designer and programmer.
+- The class designer sets requirements regarding methods that must be implemented by just declaring them, not defining them in detail (called abstract methods).
+- The programmer has to deliver all method definitions, which a validated by a dedicated module, these methods are delivered by overriding the method declaration received from the class designer.
+"
+188,OOP Advanced,Abstract classes,"The contract assures you that a child class, built upon the abstract class, will be equipped with a set of concrete methods imposed by the abstract class.
+"
+189,OOP Advanced,Abstract classes,"We want our code to be polymorphic, so all subclasses have to deliver a set of their own method implementations in order to call them by using common method names.
+"
+190,OOP Advanced,Abstract classes,"A class which contains one or more abstract methods is called an abstract class. This means that abstract classes are not limited to containing only abstract methods - some of the methods can already be defined, but if any of the methods in the abstract one, then the class becomes abstract.
+"
+191,OOP Advanced,Abstract classes,"An abstract method is a method that has a declaration, but does not have any implementation.
+"
+192,OOP Advanced,Abstract classes,"It isn't possible to instantiate an abstract class, and it needs subclasses to provide implementations for those abstract methods which are declared in the abstract classes.
+"
+193,OOP Advanced,Abstract classes,"The python module which provides the helper class for defining Abstract Base Classes (ABC).
+- import abc
+- make your base class import the helper class ABC, delivered by the abc module.
+- decorate abstract methods with @abstractmethod, from the abc module.
+"
+194,OOP Advanced,Abstract classes,"When you plan to implement a multiple inheritance from abstract classes, remember that an effective subclass should override all abstract methods inherited from its super classes.
+"
+195,OOP Advanced,Abstract classes,"- Abstract Base Class (ABC) is a class that cannot be instantiated. Such a class is a base class for concrete classes.
+- ABC can only be inherited from.
+- We are forced to override all abstract methods by delivering concrete method implementations.
+"
+196,OOP Foundations,"Classes, Instances, Attributes Methods -- introduction","A class expresses and idea, it's a blueprint or recipe for an instance.  Classes describe attributes and functionalities together to represent an idea as accurately as possible.  A class is a place which binds data with code.
+"
+197,OOP Foundations,"Classes, Instances, Attributes Methods -- introduction","An instance is one particular physical instantiationof a class that occupies memory and has data elements.  This is what 'self' refers to when we deal with class instances.
+"
+198,OOP Foundations,"Classes, Instances, Attributes Methods -- introduction","An object is everything in Python that you can operate on, like a class, instance, list, or dictionary. The term instance is very often used interchangeably with the term object, because object refers to a particular instance of a class.  It's a bit of a simpiification, because the term object is more general than instance.
+"
+199,OOP Foundations,"Classes, Instances, Attributes Methods -- introduction","An attribute is a capacious term that refers to two major kinds of class traits:
+- variables, containing information about the class itself or a class instance.
+- methods, formulated as Python functions, they represent a behavior that could be appied to the object.
+"
+200,OOP Foundations,"Classes, Instances, Attributes Methods -- introduction","Methods are the callable attributes of Python objects.  Such objects allow you to use round () parentheses and eventually pass some parameters, just like functions.
+- Methods are called on behalf of an object and are usually executed on object data.
+"
+201,OOP Foundations,"Classes, Instances, Attributes Methods -- introduction","A type is one of the most fundamental and abstract terms of Python:
+- It is the foremost type that any class can be inherited from.
+- If you are looking for the type of a class, then type is returned.
+- In all other cases, it refers to the class that was used to instantiate the object.
+- It's the name of a very handy Python function.
+- It returns a new type object when type () is called with three arguments.
+"
+202,OOP Foundations,Working with class and instance data - instance variables,"Python allows for variables to be used at the instance level or the class level.
+- Those at the instance level are Instance variables.
+- Those at the class level are class variables.
+"
+203,OOP Foundations,Working with class and instance data - instance variables,"Instance Variable:
+- Exists when it is explicitly created and added to an object.
+- This can be done during the object's initialization, performed by the __init__ method.
+- Or at any moment of the object's life.
+- Furthermore any existing property can be removed at any time.
+- Each object carries its own set of variables, they don't interfere with one another in any way.
+"
+204,OOP Foundations,Working with class and instance data - instance variables,"Instance variables can be created during any moment of an objects life, utilizing the built-in __dict__ property you can view its contents.
+- Instance variables within an object are completely isolated from other objects.
+"
+205,OOP Foundations,Working with class and instance data - instance variables,"Class variables are defined within the class construction, so these variables are available before any class instance is created.
+- Similar to instance variables, class variables show up in the class's __dict__ property.
+"
+206,OOP Foundations,Working with class and instance data - instance variables,"A class variable is present before any instance of the class is created:
+- It can be used to store metadata about the class.
+- It can house fixed information like description, configuration or identification values.
+- It can be useful housing mutable information like the number of instances created.
+- The class variable is not listed with the instance (object's) __dict__ property.
+"
+207,OOP Foundations,Working with class and instance data - instance variables,"When you want to set or change the class variable, you should access it via the class, if you attempt to do this via the instance variable you are overriding the class variable, creating an additional copy and planting a bug in your program.
+"
+208,OOP Advanced,Python core syntax,"Python core syntax - an ability to perform specific operations on different data types, when operations are formulated using the same operators or instructions, or even functions.
+- operators like '+', '-', '*', '/', '%' and many others.
+- oprators like '==', '<', '>', '<=', 'in' and many others.
+- indexing, slicing, subscripting.
+- built-in functions like str(), len().
+- reflexion - ininstance(), issubclass().
+"
+209,OOP Advanced,Python core syntax,"When called, functions and operators that state the core syntax are translated into magic methods delivered by specific classes.
+- These magic methods are sometimes called special purpose methods, because these methods are designated by design to handle specific operations.
+- Also called dunder methods because of the double underscores before and after.
+"
+210,OOP Advanced,Python core syntax,"When you design and implement your own classes and you want to make use of Python core syntax to operate on those class objects, you can easily achieve this by implementing the appropriate magic methods.
+"
+211,OOP Advanced,Python core syntax,"The dir() and the help() functions are a viable resource for getting an understanding of an objects capabilities.
+"
+212,OOP Advanced,Python core syntax,"Real life cases which chould be implemented using special methods:
+- Adding time intervals like hours, minutes, seconds.
+- Adding length measurements like feet-inches to yard-feet-inches.
+"
+213,Tkinter Essentials,Settling widgets in the window's interior,"There are three different methods for settling widgets:
+- These methods are implemented by geometry managers.
+- pack(), entrusting the placement to tkinter where it will find the best location.
+- grid(), a chance to express your general wishes & not as precise as place.
+- place(), the most detailed one, it forces you to precisely declare a widget's location, pixel by pixel.
+
+"
+214,Tkinter Essentials,Settling widgets in the window's interior,"There is one very important aspect:
+- The three geometry managers cannot be mixed, only one of them can be used in one application, unless you want to turn the window into a big mess.
+
+"
+215,Tkinter Essentials,Settling widgets in the window's interior,"place() in detail:
+- The method is invoked from within the widget's object, not the window as the widget is always aware of the window it belongs to.
+- The most useful place parameters are height, width, x, y.
+- x and y are determined by the relative nature to the home windows top-left corner.
+
+"
+216,Tkinter Essentials,Settling widgets in the window's interior,"grid() in detail:
+- grid sees the window's area as a grid and the whole of the window's interior is divided into a number of columns of equal width and rows of equal height.
+- the grid itself is not visible, the distribution is modeled inside the manager.
+- your are not obliged to declare the number of rows and columns in advance, grid finds the right numbers for you.
+- most commonly used parameters are column, row, columnspan, rowspan.
+"
+217,Tkinter Essentials,Settling widgets in the window's interior,"pack() in detail:
+- fully automatic geometry manager as it packs subsequent widgets into the window's interior.  The order in which the widgets are packed matters - in contrast to grid() and place().
+- useful parameters are side and fill.
+- results produced by pack can be extremely surprising.
+- should be used as a temporary solution to get a working application quickly.
+
+"
+218,Tkinter Essentials,Coloring your widgets,"Nearly everything you put inside your windows may be colored.  Most widgets have dedicated properties to handle their colors.  There are three methods to meet these needs and these ways are universal and can be used virtually everywhere.
+- English color names.
+- 750 predefined color names.
+- RGB model implementation using HEX codes.
+"
+219,Tkinter Essentials,Coloring your widgets,"RGB model impementation allows for 16,777,216 different colors (256*256*256):
+- When all the components are set to zero (absence of colors) we get black.
+- When all the components are set to 255 (full presence of colors) we get white.
+- When one of the components is set to 255 while the others are 0, we get one of the primary colors - red, green or blue.
+"
+220,Tkinter Essentials,Coloring your widgets,"HEX colors:
+- Specifying colors based off of a string starting with the '#' sign.
+- The next six digits are pairs of two-digit hexadecimal numbers.
+- When all the components are set to the same value (#0F0F0F), you will get 254 shades of gray.
+"
+221,Tkinter Essentials,A simple GUI application,"Objects of the IntVar class are used by tkinter to organize internal communication between different widgets, a regular variable can't play such a role.
+"
+222,Object Persistence,Serialization of Python objects using the pickle module,"The simplest way to persist outcomes is to generate a flat text file and to write your outcomes.  It's a very simple thing to do which is not suitable for persisting sets of different types of objects or nested structures.
+"
+223,Object Persistence,Serialization of Python objects using the pickle module,"In Python, serialization is the process of converting an object structure into a stream of bytes to the store the object in a file or database, or to transmit it via a network. This byte stream contains all the information necessary to reconstruct the object in another Python script.
+- The reverse process is call deserialization.
+"
+224,Object Persistence,Serialization of Python objects using the pickle module,"The following types can be pickled:
+- None, booleans.
+- Integers, floating-point numbers, complex numbers.
+- Strings, bytes, bytearrays.
+- Tuples, lists, sets and dictionaries containing pickleable objects.
+- Objects, including objects with references to other objects (avoiding cycles!)
+- References to functions and classes, but not their definitions.
+"
+225,Object Persistence,Serialization of Python objects using the pickle module,"In the 'pickle' module, you have to remember the order in which the objects were persisted and the deserialization code should follow the same order.
+"
+226,Object Persistence,Serialization of Python objects using the pickle module,"Pickling Errors:
+- Attempts to pickle non-pickleable objects will raise the PicklingError exception.
+- Trying to pickle a highly recursive data structure may raise a RecursionError exception.
+- AttributeErrors are raised when the object you are unpickling is a function or class name that does not have the full definition of the function or class in the environment.  The function or class must be available in the namespace of your code reading the pickle file.
+"
+227,Object Persistence,Serialization of Python objects using the pickle module,"Key notes on Python pickling:
+- It's a python implementation of the serialization process, so the pickled data cannot be exchanged with programs written in other languages like Java or C++. In such cases JSON or XML can be used.
+- The pickle module is evolving so make sure the same versions are used for pickling and unpickling.
+- Never pickle data received from untrusted or unauthenticated sources, the pickle module is not secured against erroneous or maliciously constructed data.
+"
+228,Object Persistence,Making Python objects persistent using the shelve module,"The shelve module is built on top of pickle, and implements a serialization dictionary where objects are pickled and associated with a key.  The keys must be ordinary strings.
+- Convenient for when you're serializing many objects.
+"
+229,Object Persistence,Making Python objects persistent using the shelve module,"import shelve
+my_shelve = shelve.open(""first_shelve.shlv"", flag=""w"")
+""r"" = Open existing database for reading only.
+""w"" = Open existing database for reading and writing.
+""c"" = Open database for reading and writing, creating it if it doesn't exist, this is the default value.
+""n"" = Always create a new, empty database, open for reading and writing.
+"
+230,Object Persistence,Making Python objects persistent using the shelve module,"The shelve object should be treated as a Python dictionary:
+- The keys must be strings.
+- Python puts the changes in a buffer which is periodically flushed to the disk.  To enforce an immediate flush, call the sync() method on your shelve object.
+- When you call the close() method on an shelve object, it also flushes the buffers.
+"
+231,Object Persistence,Making Python objects persistent using the shelve module,"Key notes:
+- The shelve process creates additional files to support the database, never mess with those.
+- Because the shelve module is backed by pickle, it isn't safe to load a shelve from an untrusted source.  As with pickle, loading a shelve can execute arbitrary code.
+"
+232,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"The Zen of Python is a collection of 19 aphorisms, which reflect the philosophy behind Python, its guiding principles and design.
+- Tim Peters wrote it in 1999.
+- It's an Easter egg (i.e. hidden secret message or feature) available through import this.
+
+"
+233,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"""Beautiful is better than ugly.""
+- A nicely written program is not only more enjoyable to read but also more readable.
+
+"
+234,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"""Explicit is better than implicit.""
+- In Python, it's preferred to use not only the simplest way to express a programming idea, but also the most explicit, concrete, specific one.
+
+"
+235,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"""Simple is better than complex.""
+- Use appropriate tools ajdusted to the specificity of your project, if you need to implement a more complex solution, divide problems into smaller, simpler parts.
+"
+236,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"""Complex is better than complicated.""
+- Complex as consisting of many elements and complicated, meaning difficult to understand. Divide it into well-separted parts.
+- Avoid misunderstanding, lack of clarity and miscomprehension.
+"
+237,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"""Flat is better than nested.""
+- Nesting code makes it more difficult to follow and understand. Anything above three levels of nested loops or if statements should be a clear signal to refactor code.
+- Flat code is more user-friendly and becomes much easier to maintain, remember this.
+"
+238,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"""Sparse is better than dense.""
+- The key to readibility is to strike a balance between the two: reduce nesting, then try to reduce density (long lines of code, etc.)
+"
+239,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"""Readability Counts.""
+- The essence of Python philosophy.
+- Code is read more often than written.
+"
+240,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"""Special cases aren't special enough to break the rules...""
+- Discipline, consistency and compliance with standards and conventions.
+- Ensure backwards compatibility.
+"
+241,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"""...Although, practicality beats purity.""
+- The ultimate goal is to solve real problems and write programs that perform some particular task.
+- Rules sometimes have to be broken, exceptions have to be made.
+"
+242,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"""Errors should never pass silently.""
+""Unless explicitly silenced.""
+- A program that crashes is easier to debug, than a program that silences an error.
+- Raising an exception draws your attention to the issue and provides important information about what happened and why.
+"
+243,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"""In the face of ambiguity, refuse the temptation to guess.""
+- Always test your code.
+- Testing your code allows you to save time.
+- Avoid writing ambigous code, give self-commenting names and leave comments.
+"
+244,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"""There should be one - and preferably only one - obvious way to do it.""
+"" Although that way may not be obvious at first unless you're Dutch.""
+- Agree on the best way to achieve a particular goal.
+- Follow the language use standards and conventions.
+- Each function, each class, each method - each entity should have a single cohesive responsibility.
+"
+245,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"""Now is better than never""
+""Although never is often better than *right now*.""
+- You should not put off till tomorrow what you can do today.  Whenever you have the Eureka effect, write down your thoughts.
+- There is not such things as a perfect thing.
+- Also, don't rush.
+"
+246,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"""If the implementation is hard to explain, it's a bad idea.""
+""If the implementation is easy to explain, it may be a good idea.""
+- Everthing and anything that can be explained in words can be translated into code, and eventually turned into a well-operating computer program.
+- Keep things simple, the simpler the better.
+"
+247,PEP 20: The Zen of Python,PEP 20 - The Zen of Python,"""Namespaces are one honking great idea - let's do more of those!""
+- Avoid conflicts with already exsiting names across different scopes.
+- Functions, classes, objects, modules, packages, they're all namespaces.
+- Using the global keyword before a global keyword inside the function is a mechanism that allows you to alter that variable, even though it resides in a different scope (bad practice)
+"
+248,Tkinter Essentials,Interacting with widget methods,"Widget methods closely bound to the unique features of event programming:
+- after(), expects two arguments, the first is a time interval specification in milliseconds, when this amount of time elapses the manager will invoke the existing function (which is the second argument).
+- after() is invoked only once.
+- after() also creates a unique id, which can then be used within after_cancel(id)
+
+"
+249,Tkinter Essentials,Interacting with widget methods,"The destroy()  method is very destructive, it removes the widget completely, not only from your sight, but also from the event manager's memory, as the widget's object is deleted and becomes inaccessible.
+- The method can be used on the window or individual widgets.
+- If the widget has children, all the children will be destroyed recursively.
+"
+250,Tkinter Essentials,Interacting with widget methods,"At most only one widget can have the focus:
+- The focus can be controlled programatically.
+- focus_get() method returns a reference to the currently focussed widget, or None when no widget owns the focus.
+- focus_set() method focuses the widget from the method which was invoked, so you have to choose it carefully.
+"
+251,Tkinter Essentials,Looking at variables,"Tkinter uses a special kind of variable called an observable variable.  This variable works like a regular variable (it's able to store values which are accesible to the outside world).  Any change to the variable's state can be observed by a number of outside agents.
+"
+252,Tkinter Essentials,Looking at variables,"Observable variables are an object of the container class, which means that a variable of this kind has to be explicitly created and initialized.
+- These variables are also typed.
+- You have to be aware of what type of value you want with them and not change your mind during the variable's life.
+- You can only create an observable variable after the main window initialization.
+"
+253,Tkinter Essentials,Looking at variables,"There are four types of observable variable used by tkinter:
+BooleanVar - set to False initially.
+DoubleVar - set to 0.0 initially.
+IntVar - set to o initially.
+StringVar - set to """" initially.
+"
+254,Tkinter Essentials,Looking at variables,"Assigning and using values within observable variables is done with the following methods:
+set()
+get()
+"
+255,Tkinter Essentials,Looking at variables,"Each observable variable can be enriched with a number of observers.  An observer is a function (a kind of callback) which will be invoked automatically each time a specified event occurs in the variable's life:
+- The number of observers is not limited.
+- obsid = variable.trace(trace_mode, observer).
+- The functions returns a string which is a unique observer identifier.
+"
+256,Lexicon of Widgets and more Tkinter Essentials,Working with the canvas,"The canvas widget is a flat, rectangular surface that you can cover with drawings, text, frames and other widgets.
+"
+257,Lexicon of Widgets and more Tkinter Essentials,Working with the canvas,"The canvas widget is created using canvas(), its first argument is the master widget (as usual), the most usable properties of canvas are:
+- borderwidth
+- background (bg)
+- height
+- width
+"
+258,Lexicon of Widgets and more Tkinter Essentials,Working with the canvas,"An existing Canvas offers a set of methods designed to create different graphical constructs.
+PART 1:
+- create_line(), to create a polygonal chain.
+- create_rectangle(), the method draws a rectangle with two opposite vertices as the points.
+- create_polygon(), very similar to drawing a line with the differnce being that the last segment in the chain is drawn automatically.
+- create_oval(), to draw an ellipse or circle with vertices at two points.
+"
+259,Lexicon of Widgets and more Tkinter Essentials,Working with the canvas,"An existing Canvas offers a set of methods designed to create different graphical constructs.
+PART 2:
+- create_arc(), to draw a part of an ellipse with vertices at two points.
+- create_text(), puts the text on the canvas, the text is placed inside of a rectangle at two points.
+- create_image(), draws a bitmap image of the image passed as a keyword argument.  You can also use a JPEG bitmap with some additional steps.
+"
+260,Tkinter Essentials,Visiting widgets' properties,"Every widget has a set of properties, and the widget's user is able to change them by modifying the widget's appearance and behavior.
+- The first method is based on using a dictionary which exists inside every widget. (Widget[""prop""])
+- The second method relies on cget() to read the property's value, and config() which allows you to set a new value to the property.
+"
+261,Tkinter Essentials,Visiting widgets' properties,"Every widget presenting a piece of text (e.g., Button and Label but not Frame) can be made to use a font different from the default.
+- Tkinter represents fonts as tuples using strings.
+- (""font_family_name"", ""font_size"")
+- (""font_family_name"", ""font_size"", ""font_style"")
+- font_styles are ""bold"", ""italic"", ""underline"", ""overstrike"".
+"
+262,Tkinter Essentials,Visiting widgets' properties,"Every widget occupies a part of the window's area. Widget size properties are:
+- borderwidth, highlightthickness, padx, pady, wraplength, height, underline, width.
+"
+263,Tkinter Essentials,Visiting widgets' properties,"Widget's can also be colored, some of the options for this are:
+- background (bg), foreground (fg), activeforeground, activebackground, disabledforeground.
+"
+264,Tkinter Essentials,Visiting widgets' properties,"The anchor is an imaginary (invisible) point inside the widget to which the text (if any) is anchored. Widgets tend to put their text in the middle of themselves (both in horizontal and vertical directions.)
+- There are nine anchors, NW N NE W CENTER E SW S SE, the CENTER anchor is the default and is used when you don't use the achor property at all.
+"
+265,Tkinter Essentials,Visiting widgets' properties,"The widget also has a cursor property.  The default mouse cursor is an arrow, you have the power to order the cursor to change to a different cursor over each of the widgets, as every widget has this property.
+- Examples include arrow, clock and heart.
+"
+266,OOP Advanced,Inheriting properties from built-in classes,"Python gives you the ability to create a class that inherits properties from any Python built-in class in order to get a new class that can enrich the parent's attributes or methods.  The newly created class has all of the well-known functionalities inherited from its parent or even parents and you can still access those attributes and methods.
+"
+267,OOP Advanced,Inheriting properties from built-in classes,"- Python allows you to subclass any built-in class such as a list, tuple, dictionary, and many others.
+- By subclassing the built-ins, you can easily adapt generics to provide more sophisticated features.
+- By subclassing the built-ins, you can modify only the parts (methods, attributes) that you need to modify, while all remaining parts will behave as good old built-ins.
+"
+268,OOP Advanced,Inheritance and polymorphism -- Inheritance as a pillar of OOP,"Inheritance is one of the most fundamental concepts of object oriented programming, and expresses the fundamental relationships between classes: superclasses (parents) and their subclasses (descendants).  Inheritance creates a class hierarchy.  Any object bound to a specific level of class hierarchy inherits all the traits (methods and attributes) defined inside any of the superclasses.
+"
+269,OOP Advanced,Inheritance and polymorphism -- Inheritance as a pillar of OOP,"Inheritance is a way of building a new class, not from scratch, but by using an already defined repertoire of traits.  The new class inherits (and this is the key) all the already existing equipment, but is able to add some features if needed.
+"
+270,OOP Advanced,Inheritance and polymorphism -- Inheritance as a pillar of OOP,"Each subclass is more specialized (or more specific) that its superclass.  Conversly, each superclass is more general (more abstract) than any of its subclasses.
+"
+271,OOP Advanced,Inheritance and polymorphism -- Inheritance as a pillar of OOP,"The are no obstacles to using multiple inheritance in Python, you can derive any new class from more than one previously defined class, but:
+- A single inheritance class is always simpler, safer and easier to understand and maintain.
+- Multiple inheritance may make method overriding somewhat tricky, moreover using the super() function can lead to ambiguity.
+- It is highly probable that by implementing multiple inheritance you are violating the single responsibility principle.
+"
+272,OOP Advanced,Inheritance and polymorphism -- Inheritance as a pillar of OOP,"MRO - Method Resolution Order:
+- The spectrum of issues possibly coming from multiple inheritance is illustrated by a classic problem named the diamond problem, or even the deadly diamond of death.
+- In the multiple ineritance scenario, any specified attribute is searched for first in the current class, then in the direct parent classes in depth-first level, from the left to right.  This is the MRO algorithm.
+"
+273,OOP Advanced,Inheritance and polymorphism -- Inheritance as a pillar of OOP,"In Python polymorphism is the provision of a single interface to objects of different types.  In other words, it is the ability to create abstract methods from specific types in order to treat those types in a uniform way.
+"
+274,OOP Advanced,Inheritance and polymorphism -- Inheritance as a pillar of OOP,"One way to carry out polymorphism is inheritance, when subclasses make use of base class methods, or override them.  By combining both approaches, the programmer is given a very convenient way of creating applications, as:
+- Most of the code could be reused and only specific methods are implemented.
+- The code is clearly structured.
+- There is a uniform way of calling methods responsible for the same operations, implemented accordingly for the types.
+"
+275,OOP Advanced,Inheritance and polymorphism -- Inheritance as a pillar of OOP,"REMEMBER:
+- You can use inheritance to create polymorphic behavior, and usually that's what you do, but that's not what polymorphism is about.
+"
+276,OOP Advanced,Inheritance and polymorphism -- Inheritance as a pillar of OOP,"DUCK TYPING:
+- A fancy name for the term describing an application of the duck test: ""If it walks like a duck and it qucks like a duck, then it must be a duck"" which determines whether an object can be used for a particular purpose.
+- An object's suitabiity is determined by the presence of certain attributes, rather than by the type of the object itself.
+"
+277,OOP Advanced,Inheritance and polymorphism -- Inheritance as a pillar of OOP,"Duck typing is another way of achieving polymorphism, and represents a more general approach than polymorphism achieved by inheritance.
+- In duck typing, we believe that objects can own methods that are called.  If they do not own them, then we should be prepared to handle exceptions.
+"
+278,OOP Advanced,Inheritance and polymorphism -- Inheritance as a pillar of OOP,"- Polymorphism is used when different class objects share conceptually similar methods (but are not always inherited)
+- Polymorphism leverages clarity and expressiveness of the application design and development.
+- When polymorphism is assumed, it is wise to handle exceptions that could pop up.
+"
+279,Lexicon of Widgets and more Tkinter Essentials,A small lexicon of widgets - Part 1,"Each tkinter widget is created by a constructor of its class. The very first argument of the constructor invocation is always the master widget, the widget that owns the newly created object.
+- The master widget is just the main window in most cases, but can also be a Frame or LabelFrame.
+- The constructor accepts a set of arguments that configure the widget, different widgets use different arguments.
+- All widgets fall into two categories, clickable and non-cllckable.
+"
+280,Lexicon of Widgets and more Tkinter Essentials,A small lexicon of widgets - Part 1,"Button Widget Properties:
+- command - the callback being invoked when the button is clicked.
+- justify - the way in which the inner text is justified, LEFT, CENTER or RIGHT.
+- state - DISBABLE and ACTIVE.
+Button Methods:
+- flash(), the button flashes a few time's but doesn't change its state.
+- invoke(), activates the callback assigned to the widget and returns the same value the callback returned, this is the only way to invoke your own callback explicitly.
+"
+281,Lexicon of Widgets and more Tkinter Essentials,A small lexicon of widgets - Part 1,"Checkbutton - A two-state switch that can be ticked (checked) or not, good for yes/no choices.
+Checkbutton properties:
+- bd, command, justify, state, variable (an observable IntVar variable set to 1 when checked and 0 otherwise), offvalue and onvalue.
+Checkbutton methods:
+- deselect() unchecks the widget, flash(), invoke(), select() checks the widget, and toggle() toggles the widget (changes its state to the opposite one.)
+"
+282,Lexicon of Widgets and more Tkinter Essentials,A small lexicon of widgets - Part 1,"Radiobutton is usable when you group (couple) a number (>1) fo these widgets - as only one of them can be mutually selected (checked).  It's a good tool to represent one of many user choices.  Assiging the same observable variable to more than one Radiobutton creates a group.
+- This also means when Radiobuttons use different observable variables, they belong to different groups by definition.
+Properties include: command, justify, state, variable and value.
+Methods include: deselect(), flash(), invoke(), select().
+"
+283,Lexicon of Widgets and more Tkinter Essentials,A small lexicon of widgets - Part 2,"Non-clickable widgets are designed to present textual information and don't have a command property, although you can use bind() to simulate similar behavior.
+"
+284,Lexicon of Widgets and more Tkinter Essentials,A small lexicon of widgets - Part 2,"The Label widget displays some lines of text inside the window.  The label widget contains two usable properties, but they are mutually exclusive.
+- text, a string which will be shown within the label.
+- textvariable, the same as for text, but makes use of an observable StringVar variable, so if you change the variable's alteration it will be immediately visible on the screen.
+The label widget has not usable methods.
+"
+285,Lexicon of Widgets and more Tkinter Essentials,A small lexicon of widgets - Part 2,"The message widget is very similar to the Label widget (it has the same properties) but is able to format the presented text by fitting it automatically to the widget's size.
+"
+286,Lexicon of Widgets and more Tkinter Essentials,A small lexicon of widgets - Part 2,"The Frame widget is in fact a container designed to store other widgets. The Frame can be used to separate a rectangular part of the window and treat it as a kind of local window.  Such a window works as a master widget for all the widgets embedded within it, it also has its own coordinate system, so when you place a widget inside a Frame, you measure its location relative to the Frame's upper-left corner.
+- If you move the Frame to a new position, all its inner widgets go with it.
+- The Frame can grasp virtually any widget, including another frame.
+"
+287,Lexicon of Widgets and more Tkinter Essentials,A small lexicon of widgets - Part 2,"The LabelFrame widget is a Frame enriched with a visible border and a title (also visible).  The title may be located at one of 12 possible places on the border line.
+LableFrame properties:
+- takefocus, the same as for the Frame.
+- text, the LabelFrame's title.
+- labelanchor, the title's location, defined as a string containing a quasi-compass coordinate.
+"

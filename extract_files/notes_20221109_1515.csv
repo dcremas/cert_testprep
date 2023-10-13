@@ -1,0 +1,72 @@
+id,topic,sub_topic,study_point
+1,Advanced OOP,Introduction to OOP,"Class - an idea, blueprint, or recipe for an instance"
+2,Advanced OOP,Introduction to OOP,Instance - an instantiation of the class; very often used interchangeably with the word 'object'
+3,Advanced OOP,Introduction to OOP,"Object - Python's representation of data and methods, objects could be aggregates of instances"
+4,Advanced OOP,Introduction to OOP,Attribute - any object or class trait; could be a variable or method
+5,Advanced OOP,Introduction to OOP,Method - A function built into a class or object; some say it's a callable atrribute
+6,Advanced OOP,Introduction to OOP,Type - refers to the class that was used to instantiate the object
+7,FIle Processing,xml - creating and processing XML files,"xml.etree.ElementTree - has a very simple API for analyzing and creating XML data.
+"
+8,FIle Processing,xml - creating and processing XML files,"XML - Extensible Markup Language is a markup language intended for storing and transporting data, e.g., by systems using the SOAP communication protocol.
+"
+9,FIle Processing,xml - creating and processing XML files,"XML Documents Contain:
+- Prolog
+- Root Element
+- Elements
+- Attributes
+"
+10,FIle Processing,xml - creating and processing XML files,"The getroot method returns the root element.
+"
+11,FIle Processing,xml - creating and processing XML files,"The root elements and all its children are Element objects.
+tag - this returns the tag name as a string.
+attrib - this returns all attributes in the tag as a dictionary.
+"
+12,FIle Processing,xml - creating and processing XML files,"In addition to iterating over tree elements, we can access them directly using indexes.
+"
+13,FIle Processing,xml - creating and processing XML files,"The iter method in the Element class returns all elements by having the tag passed as an argument, the iterator iterates recursively through all child elements and their nested elements.
+"
+14,FIle Processing,xml - creating and processing XML files,"The Element object has a method called findall to search for direct child elements, findall only searches the children of at the first nesting level.
+"
+15,FIle Processing,xml - creating and processing XML files,"The findall method also accepts an XPath expression.
+"
+16,FIle Processing,xml - creating and processing XML files,"The find method returns the first child element containing the specified tag or matching XPath expression.
+"
+17,FIle Processing,xml - creating and processing XML files,"XML is a standard recommended by the W3C organization.
+"
+18,FIle Processing,xml - creating and processing XML files,"To create a tree (an ElementTree object) from an existing XML document, pass it to the parse method.  In addition to the parse method, we can use the method called fromstring, which takes an XML string.
+"
+19,FIle Processing,csv - CSV file reading and writing,"The CSC file is a plain text file with the .csv extension.  A typical file contains comma-separted values, but other separators such as a semicolon or tab are allowed.  Only one type of separator can be used in one CSV file.
+"
+20,FIle Processing,csv - CSV file reading and writing,"For commercial projects, the recommended library to use, instead of csv, is pandas.
+"
+21,FIle Processing,csv - CSV file reading and writing,"The CSV (Comma Separated Values) format is one of the most popular file formats used to store and transfer data between different programs (including RDBMS and Excel)
+"
+22,FIle Processing,csv - CSV file reading and writing,"The reader function returns an object that allows you to iterate over each line in the CSV file.
+"
+23,FIle Processing,csv - CSV file reading and writing,"The newline='' argument added to the open function protects us from incorrect interpretation of the newline character on different platforms.
+"
+24,FIle Processing,csv - CSV file reading and writing,"The csv module provides a more convenient way to read data, where each line is mapped to an OrderedDict object, using the DictReader class.
+"
+25,FIle Processing,csv - CSV file reading and writing,"The DictReader class accepts a file object, and it reads the first line as the header to map to keys, if the file does not have a header, the fieldnames argument needs to be specified.
+"
+26,FIle Processing,csv - CSV file reading and writing,"Saving data to a CSV file is done using the writer function.  The writerow(s) methods take a list of values as an argument, and then saves them as one line in a CSV file.
+"
+27,FIle Processing,csv - CSV file reading and writing,"The quotechar and quoting arguments within the writer function (and also the reader function) allow you to handle text that would have been confused with your delimiter, options include:
+- csv.QUOTE_ALL, csv.QUOTE_NONNUMERIC, csv.QUOTE_NONE
+"
+28,FIle Processing,csv - CSV file reading and writing,"The DictWriter class maps dictionaries to rows.  Unlike the DictReader class, you have to define a header list.  The writeheader is first called with this list, and then the dictionary rows are passed to the writerow method.
+"
+29,FIle Processing,configparser - configuration file parser,"It is not a good idea to hardcode logins, passwords or access tokens directly within our code.  A better solution is to use the configuration file, the configparser module is available within the standard library.
+"
+30,FIle Processing,configparser - configuration file parser,"The DEFAULT section in a configuration file contains the default values that can be read in the other sections of the file.
+"
+31,FIle Processing,configparser - configuration file parser,"Parsing a configuration file is done utilzing the ConfigParser object, and then the read method.  It can be passed a single config.ini file or a list containing several files.
+"
+32,FIle Processing,configparser - configuration file parser,"The sections method of the ConfigParser object displays the names of the sections, excluding the DEFAULT section.  Accessing these sections is done in a manner like accessing dictionary keys.  There is a also a get method to achieve this result.
+"
+33,FIle Processing,configparser - configuration file parser,"The configparser module also houses other methods for reading configuration settings, like the read_dict method, with takes in a dictionary of dictionaries.  The configparser module also has read_file and read_string methods that allow you to read the configuration from an open file or string.
+"
+34,FIle Processing,configparser - configuration file parser,"Writing to a configuration file requires a write object (using the open method) and also a config object that houses the dictionary of dictionaries key: values.
+"
+35,FIle Processing,configparser - configuration file parser,"Interpolation allows you to create expressions consisting of a placeholder under which the appropriate value will be substituted.  FORMAT %( )s...
+"

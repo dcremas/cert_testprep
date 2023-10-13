@@ -1,0 +1,244 @@
+id,topic,sub_topic,study_point
+1,Advanced OOP,Introduction to OOP,"Class - an idea, blueprint, or recipe for an instance"
+2,Advanced OOP,Introduction to OOP,Instance - an instantiation of the class; very often used interchangeably with the word 'object'
+3,Advanced OOP,Introduction to OOP,"Object - Python's representation of data and methods, objects could be aggregates of instances"
+4,Advanced OOP,Introduction to OOP,Attribute - any object or class trait; could be a variable or method
+5,Advanced OOP,Introduction to OOP,Method - A function built into a class or object; some say it's a callable atrribute
+6,Advanced OOP,Introduction to OOP,Type - refers to the class that was used to instantiate the object
+7,FIle Processing,xml - creating and processing XML files,"xml.etree.ElementTree - has a very simple API for analyzing and creating XML data.
+"
+8,FIle Processing,xml - creating and processing XML files,"XML - Extensible Markup Language is a markup language intended for storing and transporting data, e.g., by systems using the SOAP communication protocol.
+"
+9,FIle Processing,xml - creating and processing XML files,"XML Documents Contain:
+- Prolog
+- Root Element
+- Elements
+- Attributes
+"
+10,FIle Processing,xml - creating and processing XML files,"The getroot method returns the root element.
+"
+11,FIle Processing,xml - creating and processing XML files,"The root elements and all its children are Element objects.
+tag - this returns the tag name as a string.
+attrib - this returns all attributes in the tag as a dictionary.
+"
+12,FIle Processing,xml - creating and processing XML files,"In addition to iterating over tree elements, we can access them directly using indexes.
+"
+13,FIle Processing,xml - creating and processing XML files,"The iter method in the Element class returns all elements by having the tag passed as an argument, the iterator iterates recursively through all child elements and their nested elements.
+"
+14,FIle Processing,xml - creating and processing XML files,"The Element object has a method called findall to search for direct child elements, findall only searches the children of at the first nesting level.
+"
+15,FIle Processing,xml - creating and processing XML files,"The findall method also accepts an XPath expression.
+"
+16,FIle Processing,xml - creating and processing XML files,"The find method returns the first child element containing the specified tag or matching XPath expression.
+"
+17,FIle Processing,xml - creating and processing XML files,"XML is a standard recommended by the W3C organization.
+"
+18,FIle Processing,xml - creating and processing XML files,"To create a tree (an ElementTree object) from an existing XML document, pass it to the parse method.  In addition to the parse method, we can use the method called fromstring, which takes an XML string.
+"
+19,FIle Processing,csv - CSV file reading and writing,"The CSC file is a plain text file with the .csv extension.  A typical file contains comma-separted values, but other separators such as a semicolon or tab are allowed.  Only one type of separator can be used in one CSV file.
+"
+20,FIle Processing,csv - CSV file reading and writing,"For commercial projects, the recommended library to use, instead of csv, is pandas.
+"
+21,FIle Processing,csv - CSV file reading and writing,"The CSV (Comma Separated Values) format is one of the most popular file formats used to store and transfer data between different programs (including RDBMS and Excel)
+"
+22,FIle Processing,csv - CSV file reading and writing,"The reader function returns an object that allows you to iterate over each line in the CSV file.
+"
+23,FIle Processing,csv - CSV file reading and writing,"The newline='' argument added to the open function protects us from incorrect interpretation of the newline character on different platforms.
+"
+24,FIle Processing,csv - CSV file reading and writing,"The csv module provides a more convenient way to read data, where each line is mapped to an OrderedDict object, using the DictReader class.
+"
+25,FIle Processing,csv - CSV file reading and writing,"The DictReader class accepts a file object, and it reads the first line as the header to map to keys, if the file does not have a header, the fieldnames argument needs to be specified.
+"
+26,FIle Processing,csv - CSV file reading and writing,"Saving data to a CSV file is done using the writer function.  The writerow(s) methods take a list of values as an argument, and then saves them as one line in a CSV file.
+"
+27,FIle Processing,csv - CSV file reading and writing,"The quotechar and quoting arguments within the writer function (and also the reader function) allow you to handle text that would have been confused with your delimiter, options include:
+- csv.QUOTE_ALL, csv.QUOTE_NONNUMERIC, csv.QUOTE_NONE
+"
+28,FIle Processing,csv - CSV file reading and writing,"The DictWriter class maps dictionaries to rows.  Unlike the DictReader class, you have to define a header list.  The writeheader is first called with this list, and then the dictionary rows are passed to the writerow method.
+"
+29,FIle Processing,configparser - configuration file parser,"It is not a good idea to hardcode logins, passwords or access tokens directly within our code.  A better solution is to use the configuration file, the configparser module is available within the standard library.
+"
+30,FIle Processing,configparser - configuration file parser,"The DEFAULT section in a configuration file contains the default values that can be read in the other sections of the file.
+"
+31,FIle Processing,configparser - configuration file parser,"Parsing a configuration file is done utilzing the ConfigParser object, and then the read method.  It can be passed a single config.ini file or a list containing several files.
+"
+32,FIle Processing,configparser - configuration file parser,"The sections method of the ConfigParser object displays the names of the sections, excluding the DEFAULT section.  Accessing these sections is done in a manner like accessing dictionary keys.  There is a also a get method to achieve this result.
+"
+33,FIle Processing,configparser - configuration file parser,"The configparser module also houses other methods for reading configuration settings, like the read_dict method, with takes in a dictionary of dictionaries.  The configparser module also has read_file and read_string methods that allow you to read the configuration from an open file or string.
+"
+34,FIle Processing,configparser - configuration file parser,"Writing to a configuration file requires a write object (using the open method) and also a config object that houses the dictionary of dictionaries key: values.
+"
+35,FIle Processing,configparser - configuration file parser,"Interpolation allows you to create expressions consisting of a placeholder under which the appropriate value will be substituted.  FORMAT %( )s...
+"
+36,FIle Processing,sqlite3 - interacting with SQLite databases,"The database management system (DBMS) is responsible for:
+- creating a database structure.
+- inserting, updating, deleting and searching data.
+- ensuring data security.
+- transaction management.
+- ensuring concurrent access to data for many users.
+- enabling data exchange with other database systems.
+"
+37,FIle Processing,sqlite3 - interacting with SQLite databases,"Sqlite is:
+- One of the most popular database management systems in the world.
+- A C library, which allows the user to read and write data directly to a file.
+- The complete SQL database is store in only one file (no server process).
+- The database file is cross-platform, which means it can be copied between 32 and 64 bit systems.
+
+"
+38,FIle Processing,sqlite3 - interacting with SQLite databases,"The python library for SQLite is sqlite3, providing an interface compliant with the DB-API specification described by PEP 249.
+
+"
+39,FIle Processing,sqlite3 - interacting with SQLite databases,"The connect method returns the database representation as a Connection object.  The connect method only creates a database if it cannot find a database in the given location, if the database exists SQLite connects to it.
+"
+40,FIle Processing,sqlite3 - interacting with SQLite databases,"SQL (Structured Query Language) is for creating, modifying and managing relational databases.  It is used by the most popular database management systems and the language was developed by IBM in the 1970's.
+"
+41,FIle Processing,sqlite3 - interacting with SQLite databases,"When a connection object is created, is has a very useful method called cursor.  The method creates a  Cursor object that allows any SQL statements to be executed in the database.
+"
+42,FIle Processing,sqlite3 - interacting with SQLite databases,"The execute method has an optional argument in the form of an array of parameters, it can take a tuple or a simple array as long as it contains the same number of elements as the query parameters.
+"
+43,FIle Processing,sqlite3 - interacting with SQLite databases,"The commit method confirms our changes (the current transaction), if you forget to call it your changes won't be visible in the database.
+"
+44,FIle Processing,sqlite3 - interacting with SQLite databases,"The close method closes the database connection, after inserting all tasks.
+"
+45,FIle Processing,sqlite3 - interacting with SQLite databases,"The executemany method allows you to insert multiple records at once.  As an argument, it accepts as SQL statement and an array containing any number of tuples.
+"
+46,FIle Processing,sqlite3 - interacting with SQLite databases,"Reading data saved in the database is done with the well-known Cursor object via a SELECT statement.  After calling the execute method with the appropriate SELECT statement, the Cursor object is treated as an iterator.
+"
+47,FIle Processing,sqlite3 - interacting with SQLite databases,"If you don't want to treat the Cursor object as an iterator after a SELECT statement, you can use its method called fetchall, the fetchall method is less efficient than the iterator, because it reads all records into the memory and then returns a list of tuples.
+"
+48,FIle Processing,sqlite3 - interacting with SQLite databases,"In addition to the iterator and the fetchall method, the Cursor object provides a very useful method called fetchone to retrieve the next available record.
+"
+49,FIle Processing,sqlite3 - interacting with SQLite databases,"The UPDATE statement is used to modify existing records in the database:
+
+UPDATE table_name
+SET column = ?
+WHERE id = ?;
+
+
+"
+50,FIle Processing,sqlite3 - interacting with SQLite databases,"Delete statement:
+
+DELETE FROM table_name
+WHERE condition;
+
+"
+51,FIle Processing,logging - basics logging facility for Python,"Logs are most often used to find the cause of an error.  In Python you can store logs in different places, most often it's in the form of a file, but it can also be an output stream or even an external service.
+"
+52,FIle Processing,logging - basics logging facility for Python,"The getLogger function returns a Logger objectn (the root logger), it is recommended to call the getLogger function with the __name__ argument.  Several calls to the getLogger function with the same name will always return the same object.
+"
+53,FIle Processing,logging - basics logging facility for Python,"The Logger object allows you to create logs with different levels of logging that help you to distinguish between less important logs and those reporting a serious error.
+
+The levels are NOTSET(0), DEBUG(10), INFO(20), WARNING(30), ERROR(40), CRITICAL(50)
+"
+54,FIle Processing,logging - basics logging facility for Python,"The basic logging configuration is done using the basicConfig method, with the following arguments:
+- level, filename, filemode, format.
+"
+55,FIle Processing,logging - basics logging facility for Python,"The format we define for a logger is created by combining the attributes of the LogRecord objected separated by a colon.  The LogRecord object is automatically created by the logger during logging.
+- Exampe attributes are %(name)s, %(levelname)s, %(asctime)s, %(message)s.
+"
+56,FIle Processing,logging - basics logging facility for Python,"Each logger can save logs in different locations as well as in different formats.  To do this, you must define your own handler and formatter via the FileHandler and setFormatter methods.
+"
+57,Working with RESTful APIs,Basic concepts of network programming,"REST: Representational State Transfer
+
+Re - Our machinery stores, transmits and receives representations, the way in which data or states are retained inside the system and presented to users.
+S - Using REST you can affect the object's state through the network.
+T - The network is able to act as a carrier allowing you to transmit states representations to and from the server.
+"
+58,Working with RESTful APIs,Basic concepts of network programming,"REST uses a very curious way of representing its data - it's always text. Pure, plain text.
+"
+59,Working with RESTful APIs,Basic concepts of network programming,"REST is focussed on a very specific kind of data - the data which reflects states.
+"
+60,Working with RESTful APIs,Basic concepts of network programming,"A socket is a kind of end-point.  An end-point is a point where the data is available to get if from and where the data may be sent to.
+"
+61,Working with RESTful APIs,Basic concepts of network programming,"BSD (Berkeley Software Distribution) sockets - A universal set of functions suitable for implementation in nearly all operating systems and available in all modern programming languages.  Then became POSIX sockets.
+"
+62,Working with RESTful APIs,Basic concepts of network programming,"All modern OSs implement BSD sockets in a more or less accurate way.  Despite their differences, the general idea remains the same.
+"
+63,Working with RESTful APIs,Basic concepts of network programming,"Socket Domain - Unix Domain and Internet Domain (TCP/IP)
+Socket Address - IP Address and Port Number
+IP address - A 32-bit long value used to identify computers connected to any TCP/IP network.
+Socket/service number - A 16-bit long integer number identifying a socket within a particular system.  The HTTP protocol, a carrier of data used by REST, usually uses port 80.
+Protocol - A standardized set of rules allowing processes to communicate with each other.
+"
+64,Working with RESTful APIs,Basic concepts of network programming,"Protocol Stack - Is a multilayer set of cooperating protocols providing a unified repertoire of services.  The TCP/IP protocol stack is designed to cooperate with networks based on the IP protocol (the IP Networks)
+"
+65,Working with RESTful APIs,Basic concepts of network programming,"The conceptual model of network services describes the protocol stack in a way where the most basic, elementary services are located at the bottom of the stack, while the most advanced and abstractice lie on the top.
+"
+66,Working with RESTful APIs,Basic concepts of network programming,"The IP (Internetwork Protocol) is one of the lowest parts of TCP/IP protocol stack.  Its functionality is very simple, it is able to send a packet of data (a datagram) between two network nodes.
+"
+67,Working with RESTful APIs,Basic concepts of network programming,"The TCP (Transmission Control Protocol) is the highest part of the TCP/IP protocol stack.  It uses datagrams (provided by the lower layers) and handshakes (an automated process of synchronizing the flow of data) to construct a reliable communication channel able to transmit and receive single characters.
+"
+68,Working with RESTful APIs,Basic concepts of network programming,"UDP (User Datagram Protocol) is faster than TCP, but less reliable than TCP.  TCP is a first-choice protocol where data safety is more important than efficiency, UDP is more adequate for applications where response time is crucial.
+"
+69,Working with RESTful APIs,Basic concepts of network programming,"Connection-oriented communicated - A form of communication which demans some preliminary steps to establish the connection and other steps to finish it. Both sides of the communication are aware that the other party is connected.  (Example Phone Call.)
+"
+70,Working with RESTful APIs,Basic concepts of network programming,"Connectionless Communication - A communication which can be established ad-hoc.  Both parties have equal rights, but neither parties is aware of the other side's state. (Example Walkie Talkies).  Usually built on top of UDP.
+"
+71,Working with RESTful APIs,How to use sockets in Python,"Socket Process:
+1. Create a new socket.
+2. Connect the socket to the HTTP server of a given address.
+3. Send a request to the server.
+4. Receive the server's response (containing the requested root document).
+5. Close the socket.
+"
+72,Working with RESTful APIs,How to use sockets in Python,"The address in a socket request can be the domain name of the server (www.google.com with no leading HTTP), or it can be the IP address of the server (i.e. 87.98.235.184).  The only issue with utilizing the IP address is that there can be more than one HTTP server located at the same IP address.
+"
+73,Working with RESTful APIs,How to use sockets in Python,"The socket module is important as it is able to act as a carrier for REST.  TCP/IP is only interesting for us to the extent that it is able to transport HTTP traffic, and HTTP is interesting only to the extent that it is able to act as a carrier for REST.
+"
+74,Working with RESTful APIs,How to use sockets in Python,"Creating a socket object utilizes the AF_INET Internet socket domain as well as SOCK_STREAM (which specifies the single character device, transfering data byte by byte.)  This is prepared to work on top of TCP protocol, the default socket config.  UDP is a different constructor syntax.
+"
+75,Working with RESTful APIs,How to use sockets in Python,"The socket connect() method tries to connect your socket to the service of the specified address and port(service) number.  The two values are passed into the method as a tuple.  This is specific to the INET domain, other domains operate differently.
+"
+76,Working with RESTful APIs,How to use sockets in Python,"A conversation with the HTTP server consists of requests (sent by the client) and reponses (sent by the server)
+"
+77,Working with RESTful APIs,How to use sockets in Python,"HTTP defines a set of acceptable requests - these are the request methods or HTTP words, the method asking the server to send a particular document of a given name is called GET.
+"
+78,Working with RESTful APIs,How to use sockets in Python,"The send() method doesn't natively accept strings, that is why the b prefix is used, sample send request:
+sock.send(b""GET / HTTP/1.1\r\nHost: ""
+                 + bytes(server_addr, ""utf8"")
+                 + b""\r\nConnection: close\r\n\r\n"")
+"
+79,Working with RESTful APIs,How to use sockets in Python,"The recv() method waits for the servers response, gets it, and puts it inside a newly created object of type bytes. The argument specifies the maximal acceptable length of the data to be received, and might need to be invoked till all bytes are received.
+"
+80,Working with RESTful APIs,How to use sockets in Python,"The parameterless close() method will ensure the connection is fully terminated.
+"
+81,Working with RESTful APIs,How to use sockets in Python,"The response that is received back has two parts:
+- The reponse header, with the status code (ex. 200 for success)
+- The document, presented as HTML.
+"
+82,Working with RESTful APIs,How to use sockets in Python,"Socket Exceptions:
+- socket.gaierror thrown by the getaddrinfo() method during server connection.
+- socket.timeout, raised when the server's reaction doesn't occur in a reasonable time.  This can be set using a method named settimeout()
+"
+83,Working with RESTful APIs,Introduction to JSON,"JSON is a kind of universal bridge abe to move data between seemingly imcompatible parties, it is portable and platform independent.  JSON is the answer to a quite basic need, the need to transfer data that is the content of an object or set of objects.
+"
+84,Working with RESTful APIs,Introduction to JSON,"JSON uses two simple tricks:
+- It uses UTF-8 coded text - no machine/platform-dependent formats are used.
+- It uses a simple and not very expanded format to represent mutual dependencies and relations between different parts of objects, and is able to transfer not only the values of objects properties, but also their names.
+"
+85,Working with RESTful APIs,Introduction to JSON,"JSON knows nothing about numbers written using radices different to 10 (i.e. Octal, Hex or Binary)
+"
+86,Working with RESTful APIs,Introduction to JSON,"JSON strings may look familiar, but there is one important difference, you must not use apostrophes to delimit the text, the only delimiter is a quote.
+"
+87,Working with RESTful APIs,Introduction to JSON,"JSON strings cannot be split over multiple lines, each string must fit entirely on one line (there can be more than one string on the same line.)
+"
+88,Working with RESTful APIs,Introduction to JSON,"To represent numbers in JSON feel free to use a minus sign to put negative numbers inside the JSON text.  Don't use a plus sign to show a number is positive, don't use leading zeros. Real numbers in JSON are the same as in Python, including the utilization of scientific notation.
+"
+89,Working with RESTful APIs,Using the json module in Python,"Python uses a small set of simple rultes to build JSON messages from its native data:
+dict --> object
+list or tuple --> array
+string --> string
+int or float --> number
+True / False --> true / false
+None --> null
+"
+90,Working with RESTful APIs,Using the json module in Python,"The process in which an object (stored internally by Python) is converted into textual or any other portable aspect is often called serialization. Similarly, the reverse action (from portable into internal) is called deserialization.
+"
+91,Working with RESTful APIs,Using the json module in Python,"Four main functions in the JSON module:
+dumps() - Python object into JSON string.
+dump() - Python object into JSON file.
+loads() - JSON string into Python object.
+load() - JSON file into Python object.
+"
+92,Working with RESTful APIs,Using the json module in Python,"If a number encoded inside a JSON string doesn't have any fraction part, Python will create an integer number, or a float number otherwise.
+"

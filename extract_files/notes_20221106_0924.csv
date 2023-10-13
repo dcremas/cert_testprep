@@ -1,0 +1,17 @@
+id,topic,sub_topic,study_point
+1,Advanced OOP,Introduction to OOP,"Class - an idea, blueprint, or recipe for an instance"
+2,Advanced OOP,Introduction to OOP,Instance - an instantiation of the class; very often used interchangeably with the word 'object'
+3,Advanced OOP,Introduction to OOP,"Object - Python's representation of data and methods, objects could be aggregates of instances"
+4,Advanced OOP,Introduction to OOP,Attribute - any object or class trait; could be a variable or method
+5,Advanced OOP,Introduction to OOP,Method - A function built into a class or object; some say it's a callable atrribute
+6,Advanced OOP,Introduction to OOP,Type - refers to the class that was used to instantiate the object
+7,Advanced OOP,Introduction to OOP,"Class - an idea, blueprint, or recipe for an instance"
+8,Advanced OOP,Introduction to OOP,Instance - an instantiation of the class; very often used interchangeably with the word 'object'
+9,Advanced OOP,Introduction to OOP,"Object - Python's representation of data and methods, objects could be aggregates of instances"
+10,Advanced OOP,Introduction to OOP,Attribute - any object or class trait; could be a variable or method
+11,Advanced OOP,Introduction to OOP,Method - A function built into a class or object; some say it's a callable atrribute
+12,Advanced OOP,Introduction to OOP,Type - refers to the class that was used to instantiate the object
+13,Advanced OOP,Introduction to OOP,"Type - refers to the class that was used to instantiate the object
+"
+14,Advanced OOP,Introduction to OOP,"Type - refers to the class that was used to instantiate the object
+"
